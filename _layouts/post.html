@@ -2,9 +2,16 @@
 layout: layout
 ---
 
-<div class="content">
-  <div id="post">
-    <h1>{{ post.title }}</h1>
-    {{ content }}
-  </div>
+<div role="main">
+<article class="post single">
+            <header>
+            <time datetime="{{ page.date }}" pubdate="">{{ page.date | date: "%B %e, %Y" }}</time>
+                <h1><a href="{{ page.url }}" rel="bookmark">{{ page.title }}</a></h1>
+
+            </header>
+            {{ content }}
+            <footer>
+                【 本文由 <a href="http://jsonvi.com/" title="jsonvi">jsonvi</a> 发表，未经许可请勿转载。商业或非商业使用请 <a target="_blank" href="mailto:jsonvi@gmail.com">联系作者</a> 】
+            </footer>
+</article>
 </div>

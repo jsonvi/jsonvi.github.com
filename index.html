@@ -3,23 +3,41 @@ layout: layout
 title: JSONVI
 ---
 
-<div class="content">
-  <div class="related">
-    <ul>
+<div role="main">
+    <article class="post single">
+            <header>
+                <time datetime="{{ site.posts.first.date }}" pubdate="">{{ site.posts.first.date | date: "%B %e, %Y" }}</time>
+                <h1><a href="{{ site.posts.first.url }}" rel="bookmark">{{ site.posts.first.title }}</a></h1>
+            </header>
+            <p> 
+                <img class="thumb-pic" src="/images/{{ site.posts.first.thumb}}" alt="{{ site.posts.first.title }}" />
+            </p>
+            <p>
+                {{ site.posts.first.excerpt }}...
+                <a href="{{ site.posts.first.url }}" title="继续阅读">继续阅读</a>
+            </p>
+            <footer>
+            </footer>
+    </article>
+
+
+<section class="post-group">
+    <h1>Previous entries</h1>
       {% for post in site.posts %}
-        
-        {% if forloop.index == 1 %}
-          <li>
-            <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-            <div class="post-contents">{{ post.content }}</div>
-          </li>
-        {% else %}
-          <li>
-            <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
+        {% if forloop.index != 1 %}
+            <article class="post preview">
+            <header>
+                <time datetime="{{ post.date }}" pubdate="">{{ post.date | date: "%B %e, %Y" }}</time>
+                <h1><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
+
+            </header>
+
+            {% if post.excerpt %}
+                {{ post.excerpt }}
+            {% endif %}
+        </article>
         {% endif %}
-      
       {% endfor %}
-    </ul>
-  </div>
+
+</section>
 </div>

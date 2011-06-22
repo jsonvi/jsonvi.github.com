@@ -1,18 +1,30 @@
 <!DOCTYPE HTML>
-
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="author" content="Your Name" />
+    <meta name="author" content="jsonvi" />
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/syntax.css">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/stylesheets/default.css" type="text/css" media="screen" charset="utf-8"/>
   </head>
   <body>
-    <header>
-      <h1><a href="/">Jekyll Base</a></h1>
+    <header role="banner">
+        <h1><a href="/" title="JSONVI - JavaScript Ninja"><img src="/images/jsonvi.png" alt="jsonvi" /></a></h1>
+        <nav role="navigation">
+            <ul>
+                    <li class="current"><a href="/">Blog</a></li>
+                    <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
     </header>
+        
     <section>
       {{ content }}
     </section>
+
+    <footer role="contentinfo">
+        <p>Copyright © 2011 <a href="http://jsonvi.com/" title="jsonvi">jsonvi</a>. All rights reserved. </p>
+    </footer>
+
   </body>
 </html>

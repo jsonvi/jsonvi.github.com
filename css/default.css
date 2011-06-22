@@ -1,0 +1,1011 @@
+/* ------------------------------------------
+
+jsonvi
+jsonvi.com
+github.com/jsonvi
+twitter.com/jsonvi
+
+Updated: 22 June 2011
+
+------------------------------------------ */
+
+
+/* ============================================================================================================= **
+**                                              A L L   M E D I A
+** ============================================================================================================= */
+
+
+/* ============================================================================================================= HTML5 ELEMENT DISPLAY */
+
+/*
+ * Add display for block-level HTML5 elements
+ * Display not defined in IE6/7/8/9 & FF3
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+
+
+
+/* ============================================================================================================= BASE */
+
+/*
+ * 1. Add vertical scrollbar to <html> element
+ * 2. Remove iOS tap highlight color to prevent entire container's being highlighted
+ * 3. Remove iOS text size adjust without disabling user zoom
+ */
+
+html { 
+    overflow-y: scroll; /* 1 */
+    -webkit-tap-highlight-color: transparent; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 3 */
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0 auto;
+    font: 100%/1.5 cambria, georgia, times, serif;
+    color: #333; 
+    background: #fff;
+    border-top: 5px solid black;
+    /* Improve readability in IE 6 */
+    _width: 540px;
+}
+
+/* Prevent border in IE6/7 when <img> is within <a> */
+
+img { border: 0; }
+
+/* ............................................................................................................. Links */
+
+a, 
+a:visited { 
+    color: #4782AC; 
+    text-decoration: none;
+}
+
+a:hover, 
+a:focus, 
+a:active { 
+    border-bottom: solid 1px #4782AC;
+}
+
+a:focus { outline: thin dotted; }
+
+/* Remove outline on <a> element when active or hovered : people.opera.com/patrickl/experiments/keyboard/test */
+
+a:hover, a:active { outline: 0; }
+
+/* ............................................................................................................. General typography */
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+dfn { font-style: italic; }
+mark { font-weight:bold; color: #000; background-color: #fe6; }
+ins { text-decoration: none; }
+q { quotes: none; }
+q:before, q:after { content: ''; content: none; }
+small { font-size: 0.875em; }
+sub, sup { position: relative; font-size: 0.75em; line-height: 0; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+/* ............................................................................................................. Code */
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, sans-serif;
+    _font-family: 'Courier New', monospace, sans-serif;
+    font-size: 1em;
+    color: #6a8014;
+}
+
+pre {
+    padding: 15px 20px;
+    border: 1px dashed #ccc; 
+    margin: 1.7143em 0; 
+    font-size: 0.875em;
+    /* Allow line wrapping for <pre> element */
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code { color: #6a8014; }
+
+a code {
+    border: 0; 
+    color: inherit; 
+    background: transparent;
+}
+
+/* ............................................................................................................. Headings */
+
+h1, 
+h2, 
+h3, 
+h4 {
+    margin: 1.5em 0 0.5em; 
+    font-weight: normal; 
+    line-height: 1.1; 
+    color: #222;
+}
+
+h1 {
+    margin: 0 0 0.5em; 
+    font-size: 2.5em; /* 40px */
+    line-height: 1.2;
+} 
+
+h2 {
+    clear: both; 
+    font-size: 1.5625em; /* 25px */
+} 
+
+h3 {
+    font-size: 1.25em; /* 20px */
+} 
+
+h4 {
+    font-size: 1em; /* 16px */
+    font-weight: bold;
+} 
+
+/* ............................................................................................................. Paragraphs / Quotes */
+
+p { 
+    margin: 0 0 1.5em; 
+}
+
+blockquote {
+    padding: 0 24px; 
+    border-left: 3px solid #ccc; 
+    margin: 1em 0 1.5em;
+    color: #666;
+}
+
+blockquote blockquote { border:0; }
+
+/* ............................................................................................................. Lists */
+
+ul { list-style:square; }
+ul, ol { padding: 0; margin: 0 0 1.5em; }
+ul li, ol li { padding: 0; margin: 0 0 0.5em; }
+nav ul, nav ol { list-style: none; }
+
+/* ............................................................................................................. Form elements */
+
+form { margin: 1em 0 0; }
+fieldset { padding: 0; border: 0; margin: 0; }
+
+label {
+    display: block; 
+    margin: 0 0 0.25em; 
+    font-style: italic;
+}
+
+input,
+textarea {
+    display: block; 
+    margin: 0; 
+    font-size: 0.8125em;
+    font-family: sans-serif;
+    vertical-align: baseline; 
+}
+
+textarea {
+    overflow: auto;
+    width: 530px; 
+    padding: 3px; 
+    border: 1px solid #aaa; 
+    margin: 0 0 1em;
+}
+
+label + input {
+    width: 250px; 
+    padding: 3px; 
+    border: 1px solid #aaa; 
+    margin: 0.25em 0 1em;
+}
+
+/* Custom submit button */
+
+input[type="submit"] { 
+    overflow: visible; 
+    display: inline-block; 
+    padding: 4px 7px;
+    border: 1px solid #999; 
+    border-bottom-color: #888;
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: normal;
+    cursor: pointer; 
+    background-color: #e2e2e2;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255,255,255,0.6)), color-stop(0.5, transparent));
+    background-image: -webkit-linear-gradient(rgba(255,255,255,0.6) 50%, transparent 50%);
+    background-image:    -moz-linear-gradient(rgba(255,255,255,0.6) 50%, transparent 50%);
+    background-image:      -o-linear-gradient(rgba(255,255,255,0.6) 50%, transparent 50%);
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px #fcfcfc;
+       -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px #fcfcfc;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px #fcfcfc;
+    -webkit-appearance: button;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active {
+    border-color: #3C7FB1;
+    background-color: #B2E0F9;
+}
+
+input[type="submit"]:active {
+    border-color: #2c628b;
+    background-color: #8fc4e0;
+    -webkit-box-shadow: inset 0 0 2px 1px #9eb0ba;
+       -moz-box-shadow: inset 0 0 2px 1px #9eb0ba;
+            box-shadow: inset 0 0 2px 1px #9eb0ba;
+}
+
+/* Fix inner padding and border displayed in FF3/4 */
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+
+
+/* ============================================================================================================= STRUCTURAL COMPONENTS */
+
+header[role="banner"],
+nav[role="navigation"],
+div[role="main"],
+aside[role="complementary"] div,
+footer[role="contentinfo"] {
+    position:relative; 
+    max-width: 540px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+/* ............................................................................................................. Header */
+
+header[role="banner"] {
+    position: relative;
+    overflow: hidden;
+}
+
+header[role="banner"] a {
+    border: 0; 
+    color: #9b9b9b;
+}
+ 
+header[role="banner"] h1 {
+    float: left; 
+    font-size: 0.9375em; 
+    line-height: 1.5em; 
+    color: #666;
+}
+
+header[role="banner"] h1 a {
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+header[role="banner"] > a {
+    float: right; 
+    margin: 10px 0 0 10px;
+}
+
+header[role="banner"] > a img {
+    display: block; 
+}
+
+/* ............................................................................................................. Navigation */
+
+nav ul {
+    padding-bottom: 0.5em;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block; 
+    margin: 0 15px 0 0; 
+    *display: inline;
+    *zoom: 1;
+}
+
+nav a {
+    position: relative; 
+    display: inline-block;
+    padding: 1px 4px; 
+    border: 0; 
+    color: #9b9b9b;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    color: black;
+}
+
+nav[role="navigation"] ul {
+    float:right;
+}
+
+nav[role="navigation"] .current a,
+nav[role="navigation"] .current a:visited {
+    font-weight: bold;
+    color: white; 
+    background: black;
+}
+
+
+/* ............................................................................................................. Main content */
+
+div[role="main"] {
+    margin-top: 4em; 
+    margin-bottom: 4em;
+}
+
+/* ............................................................................................................. Prev / Next */
+
+nav.internal {
+    margin: 5em 0 2.5em;
+}
+
+nav.internal ul {
+    padding: 0; 
+    margin: 0 -20px; 
+    overflow: hidden; 
+    *zoom: 1;
+}
+
+nav.internal li {
+    float: left; 
+    margin: 5px 0; 
+    font-size: 1.125em; 
+    color: #333;
+    /* correct IE6/7 widthless float bugs */
+    *min-width:49%;
+    _width:49%;
+}
+ 
+nav.internal li + li {
+    float: right; 
+    text-align: right;
+}
+
+nav.internal a {
+    padding: 1px 7px 2px; 
+}
+
+nav.internal a:visited {
+    color: #730800;
+}
+
+nav.internal a:visited:hover,
+nav.internal a:visited:focus,
+nav.internal a:visited:active {
+    color: #fff;
+    background: #730800;
+}
+
+nav.internal li:first-child a:before {
+    content:"\00ab  ";
+}
+
+nav.internal li + li a:after {
+    content:" \00bb";
+}
+
+/* Archive link on homepage */
+nav.internal.other nav {
+    font-size: 1.125em; 
+    text-align: center;
+}
+
+/* ............................................................................................................. Aside */
+
+aside[role="complementary"] {
+    padding: 2em 0 1em; 
+    border-top: 1px solid #f5f5f5; 
+    border-bottom: 1px solid #f5f5f5; 
+    margin: 3em 0 2em; 
+    background:#fafafa;
+}
+
+aside[role="complementary"] h1 {
+    font-size: 1.75em; 
+    margin: 0 0 0.75em;
+}
+
+aside[role="complementary"] p {
+    font-size: 0.875em; 
+    line-height: 1.5;
+}
+
+/* ............................................................................................................. Footer */
+
+footer[role="contentinfo"] {
+    padding-bottom: 1em; 
+    text-align: center; 
+    font-size: 0.75em;
+}
+
+footer[role="contentinfo"] p {
+    margin: 0 0 0.75em;
+}
+
+footer[role="contentinfo"] small {
+    display: block; 
+    font-size: 1em; 
+    line-height: 1.4; 
+    color: #777;
+}
+
+footer[role="contentinfo"] small a,
+footer[role="contentinfo"] small a:visited {
+    border-color: #333; 
+    color: #333;
+}
+
+footer[role="contentinfo"] small a:hover,
+footer[role="contentinfo"] small a:focus,
+footer[role="contentinfo"] small a:active {
+    color: #fff;
+}
+
+
+
+
+/* ============================================================================================================= ARTICLE COMPONENTS */
+
+/* Shared by posts, comments, and archives */
+
+article h1 a:link,
+article h1 a:visited {
+    border: 0; 
+    text-decoration: none;
+}
+ 
+article time {
+    display: inline-block;
+    font-size: 0.75em; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    color: #757575;
+}
+
+.archive ul time {
+    float: right; 
+    margin: 0.4em 0 0; 
+}
+
+/* ............................................................................................................. Post (shared components) */
+
+.post img {
+    display: block; 
+    border: 1px solid #ddd; 
+    margin: 1em;
+}
+
+
+/* Fix IE9 bug: jsfiddle.net/hEUhS/show/ */
+
+.post a img {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post figure {
+    margin: 0 0 1.5em;
+}
+
+.post figure img {
+    margin-bottom: 0.5em;
+}
+
+.post figure figcaption {
+    margin: 0 -30px; 
+    font-size: 0.875em; 
+}
+
+/* Uses to attribute code or link to the relevant Gist */
+
+.post pre + p > small:first-child {
+    display: block; 
+    margin: -1em 0 0; 
+    font-size: 0.8125em; 
+}
+
+/* ...................................................... Footer */
+
+.post > footer {
+    font-style: italic;
+    line-height: 1em;
+}
+
+.post > footer p {
+    display: inline; 
+    margin: 0; 
+    font-size: 0.8125em; 
+}
+
+.post > footer p a:link,
+.post > footer p a:visited {
+    border: 0;
+}
+
+/* Characters separating each part of the footer */
+
+.post > footer p + p:before {
+    content: " \00b7\00a0"; 
+    color: #000;
+}
+
+/* ............................................................................................................. Main post */
+
+.single h1 a:link,
+.single h1 a:visited {
+    border: 0; 
+    color: #000;
+}
+
+.single h1 a:hover,
+.single h1 a:visited:hover,
+.single h1 a:focus,
+.single h1 a:visited:focus,
+.single h1 a:active,
+.single h1 a:visited:active {
+    color: #666; 
+    background: transparent;
+}
+
+.single > header time {
+    margin: 0 10px 2em 0; 
+    font-size: 0.875em; 
+}
+
+.single > header + p {
+    margin: 1.1429em 0; 
+    font-size: 1.3125em; 
+    line-height: 1.3333em;
+}
+
+.single > footer {
+    padding: 0.5em 0 0; 
+    border-top: 1px solid #eee;
+    margin: 2em 0 0; 
+}
+
+/* ............................................................................................................. Preview post */
+
+.post-group {
+    margin-top: 2em; 
+    margin-bottom: 1em;
+}
+
+.post-group > h1 {
+    margin: 0 0 0.75em; 
+    font-size: 2.5em;
+}
+
+.post-group nav {
+    text-align: center;
+    font-size:1.125em;
+}
+
+.preview {
+    padding: 0; 
+    margin: 0 0 3em;
+}
+
+.preview > header {
+    padding: 0;
+}
+
+.preview time {
+    margin: 0 0 0.75em; 
+}
+
+.preview h1 {
+    padding: 0; 
+    border: 0; 
+    margin: 0; 
+    font-size: 1.5625em;
+}
+
+.preview > p {
+    margin: 0.5em 0 1em; 
+    line-height: 1.333em;
+}
+
+.preview footer {
+    margin: 1em 0 0;
+}
+
+
+
+
+/* ============================================================================================================= COMMENT COMPONENTS */
+
+#comments {
+    margin-top: 4.5em; 
+    counter-reset: commentnum;
+}
+
+#comments > h1 {
+    position: relative; 
+    font-size: 2em; 
+    color: #222;
+}
+
+/* Speech bubble icon */
+
+#comments > h1:before {
+    content: ""; 
+    position: absolute; 
+    z-index: 2; 
+    top: 14px; 
+    left: -25px; 
+    width: 15px; 
+    height: 10px;
+    background: #333;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+}
+
+#comments > h1:after {
+    content: ""; 
+    position: absolute; 
+    z-index: 1; 
+    top: 20px; 
+    left: -19px; 
+    border: 4px solid transparent; 
+    border-left-color: #333;
+    /* For Firefox < 3.5 */
+    display: block; 
+    width: 0; 
+}
+
+/* Article being commented on */
+
+#comments > h1 span {
+    display: block; 
+    margin: 0.25em 0 0; 
+    font-size: 0.6875em; 
+    color: #555;
+}
+
+/* ............................................................................................................. User comments */
+
+.comment {
+    margin: 2em 0 2.5em;
+}
+
+.comment h3 {
+    margin: 0.25em 0 0.5em; 
+    font-size: 1.125em;
+}
+
+/* Comment permalink */
+
+.comment time + a {
+    margin: 0.3em 0 0 0; 
+    font-size: 0.75em;
+}
+
+/* Comment number */
+
+.comment time + a:after {
+    content: counter(commentnum); 
+    counter-increment: commentnum;
+}
+
+.comment p {
+    margin: 0 0 1.4em; 
+    font-size: 0.875em; 
+    line-height: 1.4em;
+}
+
+/* Moderation message */
+
+.comment header p {
+    padding: 0; 
+    margin: 0.5em 0;
+}
+
+.comment header p em {
+    padding: 0 3px; 
+    background: #fe6;
+}
+
+/* ............................................................................................................. Comment form wrapper */
+
+#respond {
+    margin: 3em 0 1em;
+}
+
+#respond h1 {
+    margin-bottom: 0.25em; 
+    font-size: 1.5625em;
+}
+
+/* ============================================================================================================= ADMIN */
+
+.admin-dashboard {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    overflow: hidden;
+    width: 18px;
+    height: 18px;
+}
+
+.admin-dashboard img {
+    display: block;
+    border: 1px solid #000;
+}
+
+.post-edit-link:link,
+.post-edit-link:visited,
+.comment-edit-link:link,
+.comment-edit-link:visited {
+    border: 0; 
+    text-transform: uppercase; 
+    font-size: 13px; 
+    font-weight: bold; 
+    font-style: italic; 
+    color: #c00;
+}
+
+.post-edit-link:hover,
+.comment-edit-link:hover {
+    color: #fff; 
+    background: #c00;
+}
+
+.comment-edit-link:after {
+    content: "\00a0\00b7\00a0"; 
+    color: #000;
+}
+
+
+
+
+
+
+/* ============================================================================================================= **
+**                                       N A R R O W   V I E W P O R T S
+** ============================================================================================================= */
+
+@media screen and (max-width: 620px) {
+
+    header[role="banner"],
+    nav[role="navigation"],
+    div[role="main"],
+    aside[role="complementary"] div,
+    footer[role="contentinfo"] {
+        padding-left: 5px; 
+        padding-right: 5px;
+    }
+    
+    .post img {
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
+        margin-right: 0;
+    }
+    
+    .post figure figcaption {
+        margin: 0;
+    }
+    
+/* end of @media */}
+
+
+@media screen and (max-width: 540px) {
+    
+    nav.internal ul { 
+        margin: 0; 
+    }
+    
+    textarea { 
+        width: 90%; 
+    }
+
+/* end of @media */}
+
+
+@media screen and (max-width: 480px) {
+
+    body { 
+        font-size: 0.875em; 
+    }
+     
+    pre { 
+        padding: 5px 10px; 
+    }
+
+    div[role="main"],
+    #comments { 
+        margin: 2em 0; 
+    }
+    
+    .post-group {
+        margin-top: 4em;
+    }
+    
+    nav.internal {
+        margin: 2em 0;    
+        line-height: 1.4em;
+    }
+
+    nav.internal li + li {
+        float: left; 
+        text-align: left;
+    }
+
+    nav.internal a { 
+        padding: 0; 
+    }
+    
+    nav.internal li:first-child a:before { 
+        content: "Next:  "; 
+    }
+    
+    nav.internal li + li a:before { 
+        content: "Prev:  "; 
+    }
+    
+    nav.internal li + li a:after { 
+        content: ""; 
+    }
+
+    .archive ul time {
+        float: none; 
+        display: block; 
+        margin: 1em 0 0;
+    }
+ 
+/* end of @media */}
+
+
+@media screen and (max-width: 340px) {
+
+    header[role="banner"] { 
+        margin: 0 0 10px; 
+    }
+    
+    header[role="banner"] h1 { 
+        float: none; 
+        width: 100%; 
+    }
+    
+    header[role="banner"] > a { 
+        float: left; 
+        margin: 0 12px 0 0; 
+    }
+
+    nav[role="navigation"] li { 
+        margin: 0 5px 5px 0; 
+    }
+
+    article h1 { 
+        font-size: 2em; 
+    }
+
+    label + input { 
+        width: 90%; 
+    }
+
+/* end of @media */}
+
+
+
+
+
+/* ============================================================================================================= **
+**                                                P R I N T
+** ============================================================================================================= */
+
+@media print {
+
+    * {
+        background: transparent !important; 
+        color: black !important;
+    }
+
+    a, 
+    a:visited { 
+        border: 0;
+        color: #444 !important; 
+        text-decoration: underline; 
+    }
+
+    img {
+        max-width:100% !important;
+        border: 0;
+    }
+
+    header[role="banner"] h1,
+    header[role="banner"] > a {
+        float: none;
+        display: block;
+        margin: 0 0 10px
+    }
+    
+    header[role="banner"] > a img {
+        display: none;
+    }
+    
+    header[role="banner"] > a[href]:after {
+        content: attr(href);
+    }
+    
+    aside[role="complementary"] {
+        border-color: #000;
+    }
+
+    article a[href]:after,
+    aside a[href]:after {
+        content: " (" attr(href) ")";
+        border: 0 !important; 
+    }
+
+    nav,
+    #respond,
+    header[role="banner"] > p,
+    .post > header a[href]:after,
+    .post footer a[href]:after {
+        display: none;
+    }
+
+    img,
+    pre, 
+    blockquote { 
+        page-break-inside: avoid; 
+    }
+
+    h1,
+    h2, 
+    h3 { 
+        page-break-after: avoid;
+    }
+
+    #comments {
+        page-break-before: always;
+    }
+
+    p, 
+    h2, 
+    h3 { 
+        orphans: 3; 
+        widows: 3;
+     }
+
+    @page { 
+        margin: 0.5cm;
+    }
+
+/* end of @media */}
+
+
