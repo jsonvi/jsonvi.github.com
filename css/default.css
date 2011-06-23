@@ -965,26 +965,30 @@ article time {
 
 /* social icons begin */
 #social-wrap {
+	width: 100%;
+    overflow:hidden;
 }
 #social-wrap a { 
-    display:block;
-}
-#social-wrap a img { 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
   -moz-opacity: 0.3;
   -khtml-opacity: 0.3;
   opacity: 0.3;
 }
-#social-wrap a:hover { 
-    border: 0;
-}
-#social-wrap a img:hover {
+#social-wrap a:hover {
+  border: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   -moz-opacity: 1;
   -khtml-opacity: 1;
   opacity: 1;
+}
+/* ie6 hacks */
+.ie6 #social-wrap a {
+    float:left;
+    margin-right:5px;
+    width:32px;
+    height:32px;
 }
 
 /* social icons end */
