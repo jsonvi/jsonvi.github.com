@@ -344,6 +344,9 @@ nav a:active {
     color: black;
 }
 
+.ie6 nav {
+    float:right;
+}
 nav[role="navigation"] {
     float:right;
 }
