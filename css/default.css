@@ -274,7 +274,6 @@ input::-moz-focus-inner {
 /* ============================================================================================================= STRUCTURAL COMPONENTS */
 
 header[role="banner"],
-nav[role="navigation"],
 div[role="main"],
 aside[role="complementary"] div,
 footer[role="contentinfo"] {
@@ -345,7 +344,7 @@ nav a:active {
     color: black;
 }
 
-nav[role="navigation"] ul {
+nav[role="navigation"] {
     float:right;
 }
 
@@ -800,7 +799,6 @@ article time {
 @media screen and (max-width: 620px) {
 
     header[role="banner"],
-    nav[role="navigation"],
     div[role="main"],
     aside[role="complementary"] div,
     footer[role="contentinfo"] {
