@@ -965,10 +965,10 @@ article time {
 
 /* social icons begin */
 #social-wrap {
-    position: fixed;
-    width: 32px;
 }
-#social-wrap a { }
+#social-wrap a { 
+    display:block;
+}
 #social-wrap a img { 
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
