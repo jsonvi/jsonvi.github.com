@@ -341,19 +341,36 @@ nav a {
 nav a:hover,
 nav a:focus,
 nav a:active {
+    border: 0;
     color: black;
 }
 
-.ie6 header {
-}
+/* IE6 Hacks */
 
+.ie6 header {
+	overflow: hidden;
+	width: 100%;
+    margin-bottom:50px;
+}
 .ie6 header h1 {
-    width: 200px;
     float: left;
+}
+.ie6 section header {
+    margin-bottom: 10px;
+}
+.ie6 section header h1 {
+    float: none;
 }
 .ie6 nav {
     float:right;
 }
+.ie6 nav .current a {
+    font-weight: bold;
+    color: white; 
+    background: black;
+}
+
+
 nav[role="navigation"] {
     float:right;
 }
@@ -373,82 +390,6 @@ div[role="main"] {
     margin-bottom: 4em;
 }
 
-/* ............................................................................................................. Prev / Next */
-
-nav.internal {
-    margin: 5em 0 2.5em;
-}
-
-nav.internal ul {
-    padding: 0; 
-    margin: 0 -20px; 
-    overflow: hidden; 
-    *zoom: 1;
-}
-
-nav.internal li {
-    float: left; 
-    margin: 5px 0; 
-    font-size: 1.125em; 
-    color: #333;
-    /* correct IE6/7 widthless float bugs */
-    *min-width:49%;
-    _width:49%;
-}
- 
-nav.internal li + li {
-    float: right; 
-    text-align: right;
-}
-
-nav.internal a {
-    padding: 1px 7px 2px; 
-}
-
-nav.internal a:visited {
-    color: #730800;
-}
-
-nav.internal a:visited:hover,
-nav.internal a:visited:focus,
-nav.internal a:visited:active {
-    color: #fff;
-    background: #730800;
-}
-
-nav.internal li:first-child a:before {
-    content:"\00ab  ";
-}
-
-nav.internal li + li a:after {
-    content:" \00bb";
-}
-
-/* Archive link on homepage */
-nav.internal.other nav {
-    font-size: 1.125em; 
-    text-align: center;
-}
-
-/* ............................................................................................................. Aside */
-
-aside[role="complementary"] {
-    padding: 2em 0 1em; 
-    border-top: 1px solid #f5f5f5; 
-    border-bottom: 1px solid #f5f5f5; 
-    margin: 3em 0 2em; 
-    background:#fafafa;
-}
-
-aside[role="complementary"] h1 {
-    font-size: 1.75em; 
-    margin: 0 0 0.75em;
-}
-
-aside[role="complementary"] p {
-    font-size: 0.875em; 
-    line-height: 1.5;
-}
 
 /* ............................................................................................................. Footer */
 
@@ -1015,5 +956,3 @@ article time {
     }
 
 /* end of @media */}
-
-
