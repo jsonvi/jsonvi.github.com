@@ -344,6 +344,13 @@ nav a:active {
     color: black;
 }
 
+.ie6 header {
+}
+
+.ie6 header h1 {
+    width: 200px;
+    float: left;
+}
 .ie6 nav {
     float:right;
 }
