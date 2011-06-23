@@ -957,6 +957,16 @@ article time {
 
 /* end of @media */}
 
+/* disqus start */
+#disqus_thread {
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+.dsq-textarea-reply {
+    margin-left: 65px;
+    margin-bottom: 1.8em;
+}
+/* disqus end */
 
 
 
