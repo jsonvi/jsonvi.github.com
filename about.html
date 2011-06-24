@@ -69,11 +69,29 @@
         </section>
         <section>
             <header>
-                <h1>Contact me</h1>
+                <h1>Contact</h1>
             </header>
-            <p>
-           The best way is to <a target="_blank" href="mailto:jsonvi@gmail.com" title="email me">email me</a>. You can find me on <a href="http://twitter.com/jsonvi">Twitter</a>, <a href="https://github.com/jsonvi/">Github</a>, <a href="http://www.delicious.com/jsonvi">Delicous</a>
-           </p>
+            <pre>
+    var jsonvi = function () {
+        return {
+            contacts: {
+                'gmail'   : 'jsonvi@gmail.com',
+                'twitter' : 'twitter.com/jsonvi',
+                'github'  : 'github.com/jsonvi',
+                'weibo'   : 'weibo.com/jsonvi'
+            },
+            contact: function (YOU) {
+                var me = this;
+                for (var key in me.contacts) {
+                    if (YOU.contacts[key]) {
+                        return me.contacts[key];
+                    }
+                }
+            }
+        }
+    };
+
+            </pre>
        </section>
     </div>
 
