@@ -316,6 +316,14 @@ header[role="banner"] > a img {
     display: block; 
 }
 
+#logo {
+    display:block;
+    width: 200px;
+    height: 100px;
+    background: url(../images/sprites.png) no-repeat;
+    text-indent: -9999px;
+}
+
 /* ............................................................................................................. Navigation */
 
 nav ul {
@@ -529,13 +537,13 @@ ul.tags li {
 }
 
 .tag-1 { 
-    background: url(../images/tag_1.png) no-repeat right;
+    background: url(../images/sprites.png) no-repeat right -101px;
 }
 .tag-2 { 
-    background: url(../images/tag_2.png) no-repeat right;
+    background: url(../images/sprites.png) no-repeat right -125px;
 }
 .tag-3 { 
-    background: url(../images/tag_3.png) no-repeat right;
+    background: url(../images/sprites.png) no-repeat right -149px;
 }
 
 /* ............................................................................................................. Main post */
