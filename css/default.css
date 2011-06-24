@@ -510,6 +510,34 @@ article time {
     color: #000;
 }
 
+/* tags */
+ul.tags li { 
+    display: inline-block;
+    color: white;
+    width: 110px;
+    padding: 0 5px 0 5px;
+    margin-left: 10px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;	
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+/* ie6 hacks, inline-block will not work in block level elements (div,ul...), use float instead */
+.ie6 ul.tags li {
+    float:left;
+}
+
+.tag-1 { 
+    background: url(../images/tag_1.png) no-repeat right;
+}
+.tag-2 { 
+    background: url(../images/tag_2.png) no-repeat right;
+}
+.tag-3 { 
+    background: url(../images/tag_3.png) no-repeat right;
+}
+
 /* ............................................................................................................. Main post */
 
 .single h1 a:link,
