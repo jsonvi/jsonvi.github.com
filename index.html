@@ -21,7 +21,7 @@ title: JSONVI
 
 <section class="post-group">
       {% for post in site.posts %}
-        {% if forloop.index != 1 %}
+        {% if forloop.index != 1 and forloop.index < 5 %}
             <article class="post preview">
             <header>
                 <time datetime="{{ post.date }}" pubdate="">{{ post.date | date: "%B %e, %Y" }}</time>
@@ -35,6 +35,6 @@ title: JSONVI
         </article>
         {% endif %}
       {% endfor %}
-
+      <footer><a href="archive.html" title="更多文章">更多文章</a></footer> 
 </section>
 </div>

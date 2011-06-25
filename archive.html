@@ -1,0 +1,17 @@
+---
+layout: layout
+title: Archive
+---
+<div id="main" role="main">
+    <h2>
+        全部文章
+    </h2>
+    <ul id="archive-wrap">
+      {% for post in site.posts %}
+      <li>
+        <span>{{post.date | date: "%Y-%m-%d"}}</span>
+        <a href="{{post.url}}">{{post.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
