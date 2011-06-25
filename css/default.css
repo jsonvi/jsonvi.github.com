@@ -961,6 +961,9 @@ ul.tags li.tag-3 {
 /* end of @media */}
 
 /* disqus begin */
+.ie6 #disqus-wrap {
+    display:none;
+}
 #disqus_thread {
     margin-top: 80px;
 }
