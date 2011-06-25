@@ -16,17 +16,10 @@ title: JSONVI
                 {{ site.posts.first.excerpt }}...
                 <a href="{{ site.posts.first.url }}" title="继续阅读">继续阅读</a>
             </p>
-            <footer>
-                <section>
-                    div test 
-                </section>
-                test inside footer
-            </footer>
     </article>
 
 
 <section class="post-group">
-    <h1>Previous entries</h1>
       {% for post in site.posts %}
         {% if forloop.index != 1 %}
             <article class="post preview">

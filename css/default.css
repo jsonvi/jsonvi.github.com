@@ -472,15 +472,16 @@ article time {
 
 /* ...................................................... Footer */
 
-.post > footer {
+.post footer {
     font-style: italic;
     line-height: 1em;
+    font-size: 0.8125em; 
+    text-align:center;
 }
 
-.post > footer p {
+.post footer p {
     display: inline; 
     margin: 0; 
-    font-size: 0.8125em; 
 }
 
 
