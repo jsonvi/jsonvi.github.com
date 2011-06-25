@@ -59,8 +59,14 @@ body {
     color: #333; 
     background: #fff;
     border-top: 5px solid black;
-    /* Improve readability in IE 6 */
-    _width: 540px;
+    text-align: center;
+}
+body * {
+    text-align:left;
+}
+
+.ie6 #content-info * {
+    text-align:center;
 }
 
 /* Prevent border in IE6/7 when <img> is within <a> */
@@ -78,9 +84,8 @@ a:visited {
 a:hover, 
 a:focus, 
 a:active { 
-    border-bottom: solid 1px #4782AC;
+    color: black;
 }
-
 a:focus { outline: thin dotted; }
 
 /* Remove outline on <a> element when active or hovered : people.opera.com/patrickl/experiments/keyboard/test */
@@ -273,46 +278,42 @@ input::-moz-focus-inner {
 
 /* ============================================================================================================= STRUCTURAL COMPONENTS */
 
-header[role="banner"],
-div[role="main"],
-aside[role="complementary"] div,
-footer[role="contentinfo"] {
+#banner,
+#main,
+#content-info {
     position:relative; 
     max-width: 540px;
     padding: 0 40px;
     margin: 0 auto;
+    _width: 540px;
 }
+
 
 /* ............................................................................................................. Header */
 
-header[role="banner"] {
+#banner {
     position: relative;
     overflow: hidden;
 }
 
-header[role="banner"] a {
-    border: 0; 
-    color: #9b9b9b;
-}
- 
-header[role="banner"] h1 {
+#banner h1 {
     float: left; 
     font-size: 0.9375em; 
     line-height: 1.5em; 
     color: #666;
 }
 
-header[role="banner"] h1 a {
+#banner h1 a {
     text-transform: uppercase; 
     font-weight: bold;
 }
 
-header[role="banner"] > a {
+#banner > a {
     float: right; 
     margin: 10px 0 0 10px;
 }
 
-header[role="banner"] > a img {
+#banner > a img {
     display: block; 
 }
 
@@ -323,6 +324,7 @@ header[role="banner"] > a img {
     background: url(../images/sprites.png) no-repeat;
     text-indent: -9999px;
 }
+
 
 /* ............................................................................................................. Navigation */
 
@@ -342,49 +344,19 @@ nav a {
     position: relative; 
     display: inline-block;
     padding: 1px 4px; 
-    border: 0; 
-    color: #9b9b9b;
 }
 
 nav a:hover,
 nav a:focus,
 nav a:active {
-    border: 0;
     color: black;
 }
 
-/* IE6 Hacks */
-
-.ie6 header {
-	overflow: hidden;
-	width: 100%;
-    margin-bottom:50px;
-}
-.ie6 header h1 {
-    float: left;
-}
-.ie6 section header {
-    margin-bottom: 10px;
-}
-.ie6 section header h1 {
-    float: none;
-}
-.ie6 nav {
+nav {
     float:right;
 }
-.ie6 nav .current a {
-    font-weight: bold;
-    color: white; 
-    background: black;
-}
-
-
-nav[role="navigation"] {
-    float:right;
-}
-
-nav[role="navigation"] .current a,
-nav[role="navigation"] .current a:visited {
+nav .current a,
+nav .current a:visited {
     font-weight: bold;
     color: white; 
     background: black;
@@ -393,46 +365,46 @@ nav[role="navigation"] .current a:visited {
 
 /* ............................................................................................................. Main content */
 
-div[role="main"] {
+#main {
     margin-top: 4em; 
     margin-bottom: 4em;
 }
 
-
 /* ............................................................................................................. Footer */
 
-footer[role="contentinfo"] {
+#content-info {
     padding-bottom: 1em; 
     text-align: center; 
     font-size: 0.75em;
 }
 
-footer[role="contentinfo"] p {
+#content-info p {
     margin: 0 0 0.75em;
+    text-align:center;
 }
 
-footer[role="contentinfo"] small {
+#content-info small {
     display: block; 
     font-size: 1em; 
     line-height: 1.4; 
     color: #777;
 }
 
-footer[role="contentinfo"] a {
+#content-info a {
     color: #333;
 }
-footer[role="contentinfo"] a:hover {
+#content-info a:hover {
     border:0;
 }
-footer[role="contentinfo"] small a,
-footer[role="contentinfo"] small a:visited {
+#content-info small a,
+#content-info small a:visited {
     border-color: #333; 
     color: #333;
 }
 
-footer[role="contentinfo"] small a:hover,
-footer[role="contentinfo"] small a:focus,
-footer[role="contentinfo"] small a:active {
+#content-info small a:hover,
+#content-info small a:focus,
+#content-info small a:active {
     color: #fff;
 }
 
@@ -445,7 +417,6 @@ footer[role="contentinfo"] small a:active {
 
 article h1 a:link,
 article h1 a:visited {
-    border: 0; 
     text-decoration: none;
 }
  
@@ -512,10 +483,6 @@ article time {
     font-size: 0.8125em; 
 }
 
-.post > footer p a:link,
-.post > footer p a:visited {
-    border: 0;
-}
 
 /* Characters separating each part of the footer */
 
@@ -562,7 +529,6 @@ ul.tags li.tag-3 {
 
 .single h1 a:link,
 .single h1 a:visited {
-    border: 0; 
     color: #000;
 }
 
@@ -574,11 +540,6 @@ ul.tags li.tag-3 {
 .single h1 a:visited:active {
     color: #666; 
     background: transparent;
-}
-
-.single > header time {
-    margin: 0 10px 2em 0; 
-    font-size: 0.875em; 
 }
 
 .single > header + p {
@@ -625,7 +586,6 @@ ul.tags li.tag-3 {
 
 .preview h1 {
     padding: 0; 
-    border: 0; 
     margin: 0; 
     font-size: 1.5625em;
 }
@@ -796,11 +756,9 @@ ul.tags li.tag-3 {
 ** ============================================================================================================= */
 
 @media screen and (max-width: 620px) {
-
-    header[role="banner"],
-    div[role="main"],
-    aside[role="complementary"] div,
-    footer[role="contentinfo"] {
+    #banner,
+    #main,
+    #content-info {
         padding-left: 5px; 
         padding-right: 5px;
     }
@@ -842,7 +800,7 @@ ul.tags li.tag-3 {
         padding: 5px 10px; 
     }
 
-    div[role="main"],
+    #main,
     #comments { 
         margin: 2em 0; 
     }
@@ -888,21 +846,21 @@ ul.tags li.tag-3 {
 
 @media screen and (max-width: 340px) {
 
-    header[role="banner"] { 
+    #banner {
         margin: 0 0 10px; 
     }
     
-    header[role="banner"] h1 { 
+    #banner h1 { 
         float: none; 
         width: 100%; 
     }
     
-    header[role="banner"] > a { 
+    #banner > a { 
         float: left; 
         margin: 0 12px 0 0; 
     }
 
-    nav[role="navigation"] li { 
+    nav li { 
         margin: 0 5px 5px 0; 
     }
 
@@ -943,25 +901,21 @@ ul.tags li.tag-3 {
         border: 0;
     }
 
-    header[role="banner"] h1,
-    header[role="banner"] > a {
+    #banner h1,
+    #banner > a {
         float: none;
         display: block;
         margin: 0 0 10px
     }
     
-    header[role="banner"] > a img {
+    #banner > a img {
         display: none;
     }
     
-    header[role="banner"] > a[href]:after {
+    #banner > a[href]:after {
         content: attr(href);
     }
     
-    aside[role="complementary"] {
-        border-color: #000;
-    }
-
     article a[href]:after,
     aside a[href]:after {
         content: " (" attr(href) ")";
@@ -970,7 +924,7 @@ ul.tags li.tag-3 {
 
     nav,
     #respond,
-    header[role="banner"] > p,
+    #banner > p,
     .post > header a[href]:after,
     .post footer a[href]:after {
         display: none;
@@ -1026,9 +980,6 @@ ul.tags li.tag-3 {
     width: 32px;
     height: 32px;
     text-indent: -9999px;
-}
-.social ul li a:hover {
-    border: 0;
 }
 .social ul li a.rss-icon {
     background-position: 0 -170px;
