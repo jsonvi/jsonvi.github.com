@@ -3,7 +3,7 @@ layout: nil
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mikael Lind</title>
+  <title>jsonvi</title>
   <link href="http://jsonvi.com/atom.xml" rel="self"/>
   <link href="http://jsonvi.com/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
