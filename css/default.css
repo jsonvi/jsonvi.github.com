@@ -425,10 +425,11 @@ article h1 a:visited {
  
 article time {
     display: inline-block;
-    font-size: 0.75em; 
+    font-size: 0.85em; 
     letter-spacing: 1px; 
     text-transform: uppercase; 
-    color: #757575;
+    color: #a4a4a4;
+    padding: 0 5px 0 10px;
 }
 
 .archive ul time {
@@ -436,10 +437,15 @@ article time {
     margin: 0.4em 0 0; 
 }
 header .tags {
-    color: #757575 ;
+    color: #a4a4a4 ;
     text-align: center;
-    font-size: 0.6em;
+    font-size: 0.8em;
 }
+
+header .tags:hover {
+    color:#4782AC; 
+}
+
 
 /* ............................................................................................................. Post (shared components) */
 
