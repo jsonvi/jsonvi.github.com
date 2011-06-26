@@ -12,7 +12,7 @@ In ancient China, there was a talented girl - "Zhuo Wen Jun" who lead her M
 
 I guess there's lot of Zhuo Wen Jun 's descendants in China nowadays.
 
-<!--more-->
+<!-- end_preview -->
 
 Facts have proven that I am right because there's a girl that asked me out a few days ago.
 

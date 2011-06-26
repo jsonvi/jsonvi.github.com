@@ -5,7 +5,7 @@ category: web
 ---
 
 使用UA string 判断 浏览器 是jquery的御用方法
-<!--more-->
+<!-- end_preview -->
 
 {% highlight javascript %}
 
