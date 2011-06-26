@@ -17,8 +17,7 @@ title: JSONVI
                     <img class="thumb-pic" src="/images/{{ post.thumb}}" alt="{{ post.title }}" />
                 </p>
                 {% endif %}
-
-                {{ post.content | postmorefilter: post.url, "继续阅读" }}
+                {{ post.content | preview }} <a class="more-link" href="{{ post.url }}">继续阅读</a>
                 <footer></footer>
             </article>
       {% endfor %}
