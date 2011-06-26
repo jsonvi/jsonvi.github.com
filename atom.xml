@@ -3,7 +3,7 @@
   <title>jsonvi</title>
   <link href="http://jsonvi.com/atom.xml" rel="self"/>
   <link href="http://jsonvi.com/"/>
-  <updated>2011-06-26T12:30:47+08:00</updated>
+  <updated>2011-06-26T15:37:52+08:00</updated>
   <id>http://jsonvi.com/</id>
   <author>
     <name>Jason Guo</name>
@@ -30,6 +30,24 @@
 
 
 &lt;p&gt;&lt;em&gt;less&lt;/em&gt;的概念贯穿了全书，只有当你&lt;em&gt;less&lt;/em&gt;的时候，你才知道什么是&lt;em&gt;essential&lt;/em&gt;;只有当你一无所有的时候，你才意识到最重要的东西（阳光，空气，水），不是么？&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>Rumpetroll – 小蝌蚪快点游</title>
+      <link href="http://jsonvi.com/2010/10/05/introduce-rumpetroll"/>
+      <updated>2010-10-05T00:00:00+08:00</updated>
+      <id>http://jsonvi.com/2010/10/05/introduce-rumpetroll</id>
+      <content type="html">&lt;p&gt;这是一个名叫 Rumpetroll 的聊天室。在挪威语里，意思是“蝌蚪”。。。&lt;/p&gt;
+
+&lt;p&gt;用鼠标控制四处游动，用键盘输入聊天，输入“name:你的名字” 可以给自己的小蝌蚪起名字。&lt;/p&gt;
+
+&lt;!-- end_preview --&gt;
+
+
+&lt;p&gt;因为使用了WebSockets 技术， 所以只能用 Firefox 4 或者 chrome , safari 5 以上版本来访问。一个结合了Canvas的不错的尝试，让人看到了Web开发的未来，小蝌蚪，快点游！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.thomasguo.com/wp-content/uploads/2010/10/rumpetroll_sample.png&quot; alt=&quot;Rumpetroll&quot; /&gt;&lt;/p&gt;
 </content>
     </entry>
   
