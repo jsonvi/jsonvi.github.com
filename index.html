@@ -12,11 +12,6 @@ title: JSONVI
                     <h1><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
 
                 </header>
-                {% if post.thumb %}
-                <p>
-                    <img class="thumb-pic" src="/images/{{ post.thumb}}" alt="{{ post.title }}" />
-                </p>
-                {% endif %}
                 {{ post.content | preview }} <a class="more-link" href="{{ post.url }}">继续阅读</a>
                 <footer></footer>
             </article>
