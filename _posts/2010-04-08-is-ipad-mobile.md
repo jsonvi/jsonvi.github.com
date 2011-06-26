@@ -1,9 +1,11 @@
 ---
 layout: post
 title: ipad mobile? 是手机? 不... 
+category: web
 ---
 
 使用UA string 判断 浏览器 是jquery的御用方法
+<!--more-->
 
 {% highlight javascript %}
 

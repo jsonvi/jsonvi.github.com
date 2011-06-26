@@ -4,37 +4,36 @@ title: JSONVI
 ---
 
 <div id="main" role="main">
-    <article class="post single">
-            <header>
-                <time datetime="{{ site.posts.first.date }}" pubdate="">{{ site.posts.first.date | date: "%B %e, %Y" }}</time>
-                <h1><a href="{{ site.posts.first.url }}" rel="bookmark">{{ site.posts.first.title }}</a></h1>
-            </header>
-            <p> 
-                <img class="thumb-pic" src="/images/{{ site.posts.first.thumb}}" alt="{{ site.posts.first.title }}" />
-            </p>
-            <p>
-                {{ site.posts.first.excerpt }}...
-                <a href="{{ site.posts.first.url }}" title="继续阅读">继续阅读</a>
-            </p>
-    </article>
-
-
-<section class="post-group">
-      {% for post in site.posts %}
-        {% if forloop.index != 1 and forloop.index < 5 %}
+    <section class="post-group">
+      {% for post in paginator.posts %}
             <article class="post preview">
-            <header>
-                <time datetime="{{ post.date }}" pubdate="">{{ post.date | date: "%B %e, %Y" }}</time>
-                <h1><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
+                <header>
+                    <time datetime="{{ post.date }}" pubdate="">{{ post.date | date: "%B %e, %Y" }}</time>
+                    <h1><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
 
-            </header>
+                </header>
+                {% if post.thumb %}
+                <p>
+                    <img class="thumb-pic" src="/images/{{ post.thumb}}" alt="{{ post.title }}" />
+                </p>
+                {% endif %}
 
-            {% if post.excerpt %}
-                {{ post.excerpt }}
-            {% endif %}
-        </article>
-        {% endif %}
+                {{ post.content | postmorefilter: post.url, "继续阅读" }}
+                <footer></footer>
+            </article>
       {% endfor %}
-      <footer><a href="archive.html" title="更多文章">更多文章</a></footer> 
+      <footer class="pagination">
+              {% if paginator.previous_page %}
+                  {% if paginator.previous_page == 1 %}
+                    <a href="/" class="previous">Previous</a>
+                  {% else %}
+                    <a href="/page{{paginator.previous_page}}" class="previous">Previous</a>
+                  {% endif %}
+              {% endif %}
+              <span class="page_number ">Page: {{paginator.page}}/{{paginator.total_pages}}</span>
+              {% if paginator.next_page %}
+                <a href="/page{{paginator.next_page}}" class="next ">Next</a>
+              {% endif %}
+      </footer> 
 </section>
 </div>

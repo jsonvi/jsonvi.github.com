@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Modern Chinese Girl
+category: life
 ---
 
 In Chinese traditional culture, girls should be shy and passive.
@@ -10,6 +11,8 @@ But my experience has told me, it's not true.
 In ancient China, there was a talented girl - "Zhuo Wen Jun" who lead her MR.Right to elope just like a warrior!
 
 I guess there's lot of Zhuo Wen Jun 's descendants in China nowadays.
+
+<!--more-->
 
 Facts have proven that I am right because there's a girl that asked me out a few days ago.
 

@@ -477,6 +477,10 @@ article time {
     line-height: 1em;
     font-size: 0.8125em; 
     text-align:center;
+    padding: 0.5em 0 0; 
+    border-top: 1px solid #eee;
+    margin: 2em 0 0; 
+
 }
 
 .post footer p {
@@ -549,11 +553,6 @@ ul.tags li.tag-3 {
     line-height: 1.3333em;
 }
 
-.single > footer {
-    padding: 0.5em 0 0; 
-    border-top: 1px solid #eee;
-    margin: 2em 0 0; 
-}
 
 /* ............................................................................................................. Preview post */
 

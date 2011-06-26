@@ -15,6 +15,8 @@ The idea of building a filesystem-based wiki was inspired by [AndyGlew](http://c
  - Raw pages stored as individual text files
  - Simple wiki markup
 
+<!--more-->
+
 ## Why
 
 ### Lightweight
