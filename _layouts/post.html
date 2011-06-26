@@ -5,11 +5,9 @@ layout: layout
 <div id="main" role="main">
 <article class="post single">
             <header>
-            <time datetime="{{ page.date }}" pubdate="">{{ page.date | date: "%B %e, %Y" }}</time>
                 <h1><a href="{{ page.url }}" rel="bookmark">{{ page.title }}</a></h1>
-                <a href="/tags/" class="tags" title="tags"> TAGS : </a>{% for tag in page.tags limit: 3 %}<a href="/tags/{{tag}}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> {% endfor %}
-
-
+                <time datetime="{{ page.date }}" pubdate="">{{ page.date | date: "%m/%d/%Y" }}</time>|
+                    {% for tag in page.tags limit: 3 %}<a class="tags" title="Tag:{{tag}}" href="/tags/{{tag}}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> {% endfor %}
             </header>
             {{ content }}
             <footer role="contentinfo">
