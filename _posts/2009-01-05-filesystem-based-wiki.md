@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Building a filesystem based wiki
+tags:
+ - wiki
+ - idea
 ---
 
 ## What

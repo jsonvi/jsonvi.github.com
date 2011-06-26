@@ -7,6 +7,8 @@ layout: layout
             <header>
             <time datetime="{{ page.date }}" pubdate="">{{ page.date | date: "%B %e, %Y" }}</time>
                 <h1><a href="{{ page.url }}" rel="bookmark">{{ page.title }}</a></h1>
+                <a href="/tags/" class="tags" title="tags"> TAGS : </a>{% for tag in page.tags limit: 3 %}<a href="/tags/{{tag}}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> {% endfor %}
+
 
             </header>
             {{ content }}

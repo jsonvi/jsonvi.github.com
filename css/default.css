@@ -415,6 +415,9 @@ nav .current a:visited {
 
 /* Shared by posts, comments, and archives */
 
+article header h1 {
+    margin: 0;
+}
 article h1 a:link,
 article h1 a:visited {
     text-decoration: none;
@@ -432,6 +435,11 @@ article time {
     float: right; 
     margin: 0.4em 0 0; 
 }
+header .tags {
+    color: #757575 ;
+    text-align: center;
+    font-size: 0.6em;
+}
 
 /* ............................................................................................................. Post (shared components) */
 
@@ -439,6 +447,7 @@ article time {
     display: block; 
     border: 1px solid #ddd; 
     margin: 1em;
+    max-width: 500px;
 }
 
 
@@ -480,7 +489,6 @@ article time {
     padding: 0.5em 0 0; 
     border-top: 1px solid #eee;
     margin: 2em 0 0; 
-
 }
 
 .post footer p {

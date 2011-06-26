@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Modern Chinese Girl
-category: life
 ---
 
 In Chinese traditional culture, girls should be shy and passive.

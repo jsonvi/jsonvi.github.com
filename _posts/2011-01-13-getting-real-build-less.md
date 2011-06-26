@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  Getting Real - 始于简单
-category: reading
+tags:
+ - read
+ - getting real
+ - less
 ---
 
 ![始于简单](/images/getting_real_build_less.jpg "始于简单")
