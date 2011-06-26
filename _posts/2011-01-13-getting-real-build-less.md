@@ -12,7 +12,7 @@ category: reading
  - Less meetings and abstractions
  - Less promises
 
-<!--more-->
+<!-- end_preview -->
 
 *less*的概念贯穿了全书，只有当你*less*的时候，你才知道什么是*essential*;只有当你一无所有的时候，你才意识到最重要的东西（阳光，空气，水），不是么？
 
