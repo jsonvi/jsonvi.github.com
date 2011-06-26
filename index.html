@@ -1,33 +1,120 @@
----
-layout: layout
-title: JSONVI
----
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<div id="main" role="main">
+    <meta name="description" content="JavaScript Ninja">
+    <meta name="author" content="jsonvi" />
+
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS: implied media="all" -->
+    <link rel="stylesheet" href="/css/default.css?v=2.1">
+    <script src="/js/libs/modernizr-1.7.min.js"></script>
+    <title>JSONVI - JavaScriptNinja</title>
+  </head>
+
+
+  <body>
+    <header id="banner" role="banner">
+        <h1><a id="logo" href="/" title="JSONVI - JavaScript Ninja">JSONVI - JavaScript Ninja</a></h1>
+        <nav role="navigation">
+            <ul>
+                    <li class="current"><a href="/">Blog</a></li>
+                    <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <div id="main" role="main">
     <section class="post-group">
-      {% for post in paginator.posts %}
+      
             <article class="post preview">
                 <header>
-                    <time datetime="{{ post.date }}" pubdate="">{{ post.date | date: "%B %e, %Y" }}</time>
-                    <h1><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
+                    <time datetime="Thu Jan 13 00:00:00 +0800 2011" pubdate="">January 13, 2011</time>
+                    <h1><a href="/2011/01/13/getting-real-build-less" rel="bookmark">Getting Real - 始于简单</a></h1>
 
                 </header>
-                {{ post.content | preview }} <a class="more-link" href="{{ post.url }}">继续阅读</a>
+                <p><img src="/images/getting_real_build_less.jpg" title="始于简单" alt="始于简单" /></p>
+
+<ul>
+<li>Less features</li>
+<li>Less options/preferences</li>
+<li>Less people and corporate structure</li>
+<li>Less meetings and abstractions</li>
+<li>Less promises</li>
+</ul>
+
+
+ <a class="more-link" href="/2011/01/13/getting-real-build-less">继续阅读</a>
                 <footer></footer>
             </article>
-      {% endfor %}
+      
+            <article class="post preview">
+                <header>
+                    <time datetime="Thu Apr 08 00:00:00 +0800 2010" pubdate="">April  8, 2010</time>
+                    <h1><a href="/2010/04/08/is-ipad-mobile" rel="bookmark">ipad mobile? 是手机? 不...</a></h1>
+
+                </header>
+                <p>使用UA string 判断 浏览器 是jquery的御用方法</p>
+
+ <a class="more-link" href="/2010/04/08/is-ipad-mobile">继续阅读</a>
+                <footer></footer>
+            </article>
+      
+            <article class="post preview">
+                <header>
+                    <time datetime="Tue May 12 00:00:00 +0800 2009" pubdate="">May 12, 2009</time>
+                    <h1><a href="/2009/05/12/modern-chinese-girl" rel="bookmark">Modern Chinese Girl</a></h1>
+
+                </header>
+                <p>In Chinese traditional culture, girls should be shy and passive.</p>
+
+<p>But my experience has told me, it's not true.</p>
+
+<p>In ancient China, there was a talented girl - "Zhuo Wen Jun" who lead her MR.Right to elope just like a warrior!</p>
+
+<p>I guess there's lot of Zhuo Wen Jun 's descendants in China nowadays.</p>
+
+ <a class="more-link" href="/2009/05/12/modern-chinese-girl">继续阅读</a>
+                <footer></footer>
+            </article>
+      
       <footer class="pagination">
-              {% if paginator.previous_page %}
-                  {% if paginator.previous_page == 1 %}
-                    <a href="/" class="previous">Previous</a>
-                  {% else %}
-                    <a href="/page{{paginator.previous_page}}" class="previous">Previous</a>
-                  {% endif %}
-              {% endif %}
-              <span class="page_number ">Page: {{paginator.page}}/{{paginator.total_pages}}</span>
-              {% if paginator.next_page %}
-                <a href="/page{{paginator.next_page}}" class="next ">Next</a>
-              {% endif %}
+              
+              <span class="page_number ">Page: 1/2</span>
+              
+                <a href="/page2" class="next ">Next</a>
+              
       </footer> 
 </section>
 </div>
+
+
+    <footer id="content-info" role="contentinfo">
+        <p>Copyright © 2011 <a href="http://jsonvi.com/" title="jsonvi">jsonvi</a>. All rights reserved. </p>
+    </footer>
+
+  </body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23297986-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</html>

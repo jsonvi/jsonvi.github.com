@@ -1,24 +1,179 @@
----
-layout: nil
----
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>jsonvi</title>
   <link href="http://jsonvi.com/atom.xml" rel="self"/>
   <link href="http://jsonvi.com/"/>
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <updated>2011-06-26T12:19:49+08:00</updated>
   <id>http://jsonvi.com/</id>
   <author>
     <name>Jason Guo</name>
     <email>jsonvi@gmail.com</email>
   </author>
-  {% for post in site.posts %}
+  
     <entry>
-      <title>{{ post.title }}</title>
-      <link href="http://jsonvi.com{{ post.url }}"/>
-      <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>http://jsonvi.com{{ post.id }}</id>
-      <content type="html">{{ post.content | xml_escape }}</content>
+      <title>Getting Real - 始于简单</title>
+      <link href="http://jsonvi.com/2011/01/13/getting-real-build-less"/>
+      <updated>2011-01-13T00:00:00+08:00</updated>
+      <id>http://jsonvi.com/2011/01/13/getting-real-build-less</id>
+      <content type="html">&lt;p&gt;&lt;img src=&quot;/images/getting_real_build_less.jpg&quot; title=&quot;始于简单&quot; alt=&quot;始于简单&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Less features&lt;/li&gt;
+&lt;li&gt;Less options/preferences&lt;/li&gt;
+&lt;li&gt;Less people and corporate structure&lt;/li&gt;
+&lt;li&gt;Less meetings and abstractions&lt;/li&gt;
+&lt;li&gt;Less promises&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;!-- end_preview --&gt;
+
+
+&lt;p&gt;&lt;em&gt;less&lt;/em&gt;的概念贯穿了全书，只有当你&lt;em&gt;less&lt;/em&gt;的时候，你才知道什么是&lt;em&gt;essential&lt;/em&gt;;只有当你一无所有的时候，你才意识到最重要的东西（阳光，空气，水），不是么？&lt;/p&gt;
+</content>
     </entry>
-  {% endfor %}
+  
+    <entry>
+      <title>ipad mobile? 是手机? 不...</title>
+      <link href="http://jsonvi.com/2010/04/08/is-ipad-mobile"/>
+      <updated>2010-04-08T00:00:00+08:00</updated>
+      <id>http://jsonvi.com/2010/04/08/is-ipad-mobile</id>
+      <content type="html">&lt;p&gt;使用UA string 判断 浏览器 是jquery的御用方法&lt;/p&gt;
+
+&lt;!-- end_preview --&gt;
+
+
+
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;uaMatch&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toLowerCase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/webkit/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;webkit&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/webkit[\/ ]([\w.]+)/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/opera/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;opera&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;sr&quot;&gt;/version/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/version[\/ ]([\w.]+)/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/opera[\/ ]([\w.]+)/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/msie/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;msie&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/msie ([\w.]+)/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/mozilla/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/compatible/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;browser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;mozilla&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/rv:([\w.]+)/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;version&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;amp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ua&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;0&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;这方法很方便，也很脆弱，不信的话，可以看看我们亲爱的ipad...&lt;/p&gt;
+
+&lt;p&gt;随着ipad的出现，浏览网页的方式似乎出现了新的路，介于手机与电脑之间的，给人一种“特仑苏”的感觉，尤其是当你看到了ipad的UA string 时&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;请注意后面的Mobile字样！！！&lt;/p&gt;
+
+&lt;blockquote&gt;是手机吗？不...
+是ipad，不是所有移动设备都叫ipad&lt;/blockquote&gt;
+
+
+&lt;p&gt;诚然，一句&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;navigator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;userAgent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/iPad/i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;可以解决问题&lt;/p&gt;
+
+&lt;p&gt;但是，那些判断UA string 为mobile的网站呢？
+不妨想象一下，那些使用着“大屏幕”的ipad用户访问 www.某网站.com ，却被直接转到针对手机设计的 m.某网站.com 时的心情...&lt;/p&gt;
+
+&lt;p&gt;没有标准的useragent ， 在如今的web海域中，还要漂泊多久？&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>Modern Chinese Girl</title>
+      <link href="http://jsonvi.com/2009/05/12/modern-chinese-girl"/>
+      <updated>2009-05-12T00:00:00+08:00</updated>
+      <id>http://jsonvi.com/2009/05/12/modern-chinese-girl</id>
+      <content type="html">&lt;p&gt;In Chinese traditional culture, girls should be shy and passive.&lt;/p&gt;
+
+&lt;p&gt;But my experience has told me, it's not true.&lt;/p&gt;
+
+&lt;p&gt;In ancient China, there was a talented girl - &quot;Zhuo Wen Jun&quot; who lead her MR.Right to elope just like a warrior!&lt;/p&gt;
+
+&lt;p&gt;I guess there's lot of Zhuo Wen Jun 's descendants in China nowadays.&lt;/p&gt;
+
+&lt;!-- end_preview --&gt;
+
+
+&lt;p&gt;Facts have proven that I am right because there's a girl that asked me out a few days ago.&lt;/p&gt;
+
+&lt;p&gt;I didn't feel any chemistry with her. Well, this is not the point -_-&lt;/p&gt;
+
+&lt;p&gt;The point is she is a real warrior!&lt;/p&gt;
+
+&lt;p&gt;The modern Chinese girl is not only gentle, but also brave and strong.&lt;/p&gt;
+
+&lt;p&gt;If I fall in love with someone someday, maybe she is Zhuo Wen Jun 's descendant too :)&lt;/p&gt;
+</content>
+    </entry>
+  
+    <entry>
+      <title>Building a filesystem based wiki</title>
+      <link href="http://jsonvi.com/2009/01/05/filesystem-based-wiki"/>
+      <updated>2009-01-05T00:00:00+08:00</updated>
+      <id>http://jsonvi.com/2009/01/05/filesystem-based-wiki</id>
+      <content type="html">&lt;h2&gt;What&lt;/h2&gt;
+
+&lt;p&gt;The idea of building a filesystem-based wiki was inspired by &lt;a href=&quot;http://c2.com/cgi/wiki/?FilesystemBasedWiki&quot;&gt;AndyGlew&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;The main feature about filesystem-based wiki:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;No Web server&lt;/li&gt;
+&lt;li&gt;No Database&lt;/li&gt;
+&lt;li&gt;Cross-platform&lt;/li&gt;
+&lt;li&gt;Portable&lt;/li&gt;
+&lt;li&gt;Raw pages stored as individual text files&lt;/li&gt;
+&lt;li&gt;Simple wiki markup&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;!-- end_preview --&gt;
+
+
+&lt;h2&gt;Why&lt;/h2&gt;
+
+&lt;h3&gt;Lightweight&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For personal use, database+webserver solution is too heavy.&lt;/li&gt;
+&lt;li&gt;It's portable,cross-platform , it can live in a USB flash drive.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h3&gt;Extensibility&lt;/h3&gt;
+
+&lt;h4&gt;Third-party tools that work for text file will work for filesystem-based wiki too,such as:&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Version Control tools like svn,cvs,git, way for collaboration.&lt;/li&gt;
+&lt;li&gt;Converter Tools/Scripts,raw pages will be able to publish as html pages.&lt;/li&gt;
+&lt;li&gt;Imaginative play, extensibility will be infinite&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+    </entry>
+  
 </feed>
